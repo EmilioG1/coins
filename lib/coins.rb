@@ -8,6 +8,7 @@ class Coins
     @dime = dime
     @nickle = nickle
     @penny = penny
+    @output_array =[]
   end
   
   def money_converter
@@ -15,7 +16,6 @@ class Coins
     @dime = 0
     @nickle = 0
     @penny = 0
-    output_array = []
     until (@num < 0.25) 
       @num -= 0.25
       @quarter += 1
@@ -35,10 +35,10 @@ class Coins
     until (@num == 0.00)
       break
     end
-    output_array.push(@quarter)
-    output_array.push(@dime)
-    output_array.push(@nickle)
-    output_array.push(@penny)
+    @output_array.push(@quarter)
+    @output_array.push(@dime)
+    @output_array.push(@nickle)
+    @output_array.push(@penny)
     
   end
 end
